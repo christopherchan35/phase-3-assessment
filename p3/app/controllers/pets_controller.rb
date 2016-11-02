@@ -11,7 +11,13 @@ class PetsController < ApplicationController
   end
 
   def create
-    
+    @pet = Pet.new(pet_params)
+    if @pet.save
+      # redirect_to show path~
+    else
+      # @ errors = @pet.errors.full_messages
+      # render new
+    end
   end
 
   private
