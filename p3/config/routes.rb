@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   get '/home', :to => 'pets#index'
   get '/', :to => 'pets#index'
 
-  resources :pets, only: [:index, :show] do
+  resources :pets, only: [:index, :show, :new, :create] do
     resources :toys, only: [:index, :show]
   end
+
+  resources :pets, only: :create
 end
