@@ -1,9 +1,10 @@
 //created by hand at 9:43AM. did not generate
 $(document).ready(function(){
-  showToyListener();
+  returnToyListener();
+  appendToyListener();
 })
 
-var showToyListener = function(){
+var returnToyListener = function(){
   $('.link').on('ajax:success', function(event, response){
     var desc = []
     for (var toy in response){
@@ -11,8 +12,17 @@ var showToyListener = function(){
         desc.push(response[toy].description)
       }
     }
-
+    $('#sup').append(desc + "<br><br>");
     var shortest = desc.reduce(function (a, b) { return a.length < b.length ? a : b; });
     console.log(shortest);
+  })
+}
+
+var appendToyListener = function(){
+  $('.link').on('ajax:success', function(event, response){
+    // console.log(response);
+    // $('#')
+    // console.log(pet);
+    // $('#sup').append()
   })
 }

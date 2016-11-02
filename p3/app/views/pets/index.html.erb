@@ -7,5 +7,7 @@
 
 <% @pets.each do |p| %>
   <p><%= link_to p.name, pet_toys_path(p), class: 'link', remote: true %></p>
-  <div id="=p.id"></div>
 <% end %>
+
+<h5>Toys will magically appear here~</h5>
+<div id="sup"></div>
