@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   root :to => redirect('/pets')
   # get '/', :to => 'pets#index'
   get '/pets', :to => 'pets#index'
-
-  resources :pets, only: [:index, :show, :pets] do
+  get '/home', :to => 'pets#index'
+  get '/', :to => 'pets#index'
+  
+  resources :pets, only: [:index, :show] do
     resources :toys, only: [:index, :show]
   end
 end
