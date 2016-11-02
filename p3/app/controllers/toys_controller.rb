@@ -3,7 +3,7 @@ class ToysController < ApplicationController
     @pet = Pet.find(params[:pet_id])
     @toys = @pet.toys
     if request.xhr?
-      render json: @toys, locals: {pet: @pet}
+      render json: @toys
     else
       render 'index'
     end
