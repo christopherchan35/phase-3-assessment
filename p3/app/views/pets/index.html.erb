@@ -1,6 +1,9 @@
 <h1>Petty</h1>
 
+<h3><%= link_to 'Slash', root_path %></h3>
 <h3><%= link_to 'Home', home_path %></h3>
+<h3><%= link_to 'Pets', pets_path %></h3>
+
 
 <% @pets.each do |p| %>
   <p><%= link_to p.name, pet_toys_path(p), class: 'link', remote: true %></p>

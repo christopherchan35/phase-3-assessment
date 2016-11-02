@@ -8,12 +8,9 @@ var showToyListener = function(){
     var desc = []
     for (var toy in response){
       for (var description in toy){
-        console.log(response[toy]);
         desc.push(response[toy].description)
       }
     }
-    // console.log(response);
-    // console.log(desc);
 
     var shortest = desc.reduce(function (a, b) { return a.length < b.length ? a : b; });
     console.log(shortest);
