@@ -1,6 +1,7 @@
 <h1>Petty</h1>
 
-<!-- would like to put the code below on pets.html.erb, but no go -->
+<h3><%= link_to 'Home', home_path %></h3>
+
 <% @pets.each do |p| %>
   <p><%= link_to p.name, pet_toys_path(p), class: 'link', remote: true %></p>
 <% end %>

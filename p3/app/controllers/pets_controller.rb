@@ -5,7 +5,4 @@ class PetsController < ApplicationController
 
   def show
   end
-
-  def pets
-  end
 end
